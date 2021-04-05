@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <Center h="100vh" w="100vw" color="white">
-        <Stack textAlign="center">
+        <Stack textAlign="center" data-aos="fade-up" data-aos-duration="3000">
           <Heading as="h3" size="1xl">
             I am
           </Heading>
