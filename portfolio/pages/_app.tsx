@@ -1,8 +1,8 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import type { AppProps } from "next/app";
-import { theme } from "../constants/theme";
 import AOS from "aos";
 import { useEffect } from "react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { theme } from "../constants/theme";
 import "../styles/main.scss";
 import "aos/dist/aos.css";
 
@@ -14,6 +14,7 @@ function App({ Component, pageProps }: AppProps) {
       once: true,
     });
   }, []);
+
   return (
     <ChakraProvider theme={extendTheme({ ...theme })}>
       <Component {...pageProps} />

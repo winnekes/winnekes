@@ -5,3 +5,15 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 6px;
 }
+
+.main-heading {
+  font-size: 100px;
+  font-family: "Anton", serif !important;
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  text-shadow: -3px 0 1px rgb(30, 242, 241), 3px 0 1px rgb(246, 5, 10);
+}
+
+.main-heading h1 {
+  display: inline;
+}
