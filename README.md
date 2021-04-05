@@ -4,8 +4,10 @@ I strive for three things in development: clarity, beauty and reusability.
 
 
 ### 💡 Currently working on
-- Steve the Robot (working title): IoT - a cute, mischievous desk robot with his own personality
-- SimplyShift - a simple calendar for people with irregular hours 
+- **TypeScript for Jupyter Notebook** - open source project, recently took over ownership
+- **Steve the Robot** (working title): IoT - a cute, mischievous desk robot with his own personality
+- **SimplyShift** - a simple calendar for people with irregular hours 
+
 
 ### 👋🏼 Say hello!
 
