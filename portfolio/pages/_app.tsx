@@ -3,7 +3,7 @@ import type { AppProps } from "next/app";
 import { theme } from "../constants/theme";
 import AOS from "aos";
 import { useEffect } from "react";
-import "../styles/globals.css";
+import "../styles/main.scss";
 import "aos/dist/aos.css";
 
 function App({ Component, pageProps }: AppProps) {

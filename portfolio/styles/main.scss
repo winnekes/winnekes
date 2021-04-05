@@ -18,9 +18,5 @@ body {
   height: 100vh;
 }
 
-/* Headers */
-
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 6px;
-}
+@import "animations";
+@import "typography";
