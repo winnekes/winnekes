@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Train+One&display=swap");
+/* Global overrides */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Anton&display=swap");
 
 html,
 body {
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 #__next {
@@ -17,4 +16,11 @@ body {
   -o-background-size: cover;
   background-size: cover;
   height: 100vh;
+}
+
+/* Headers */
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }

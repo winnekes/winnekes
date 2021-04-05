@@ -1,5 +1,6 @@
-import { Box, Center, Heading, Stack } from "@chakra-ui/react";
+import { Center, Heading, Stack, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -11,11 +12,11 @@ export default function Home() {
 
       <Center h="100vh" w="100vw" color="white">
         <Stack textAlign="center">
-          <Heading as="h3" textTransform="uppercase">
+          <Heading as="h3" size="1xl">
             I am
           </Heading>
-          <Heading as="h1">Simona Winnekes</Heading>
-          <Heading as="h3" textTransform="uppercase">
+          <h1 className={styles.main_heading}>Simona Winnekes</h1>
+          <Heading as="h3" size="1xl">
             I love cats, robots and coding
           </Heading>
         </Stack>
