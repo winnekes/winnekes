@@ -8,6 +8,7 @@ h3 {
 
 .main-heading {
   font-size: 100px;
+  color: #ffffff;
   font-family: "Anton", serif !important;
   letter-spacing: 7px;
   text-transform: uppercase;
@@ -16,4 +17,11 @@ h3 {
 
 .main-heading h1 {
   display: inline;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-heading {
+    font-size: 2rem;
+    text-shadow: -2px 0 1px rgb(30, 242, 241), 2px 0 1px rgb(246, 5, 10);
+  }
 }
