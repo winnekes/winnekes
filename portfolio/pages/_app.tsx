@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 import AOS from "aos";
+import { Head } from "next/document";
 import { useEffect } from "react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { AnimateSharedLayout } from "framer-motion";
