@@ -11,7 +11,7 @@ function App({ Component, pageProps }: AppProps) {
   useEffect(() => {
     AOS.init({
       easing: "ease-out-cubic",
-      delay: 1100,
+      delay: 3000,
       once: true,
     });
   }, []);
