@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>simona winnekes - from nurse to coding</title>
+        <title>simona winnekes - from scrubs to pyjamas; a web developer's portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content="From scrubs to pyjamas - a simple portfolio of a web developer in love with Node.js and TypeScript. Follow my adventure to build my very own robot!">
         <link
           rel="apple-touch-icon"
           sizes="180x180"
