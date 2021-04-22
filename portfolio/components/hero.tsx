@@ -1,4 +1,13 @@
-import { Center, Divider, Flex, Heading, HStack, Icon } from "@chakra-ui/react";
+import {
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  HStack,
+  Icon,
+  Text,
+  VisuallyHidden,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
@@ -9,7 +18,12 @@ export function Hero() {
   const demoRef = useRef(null);
 
   useTyped(demoRef, {
-    strings: ["^1000 allergic to bees", "building a robot", "Simona Winnekes"],
+    strings: [
+      "^1000 allergic to bees",
+      "building a robot",
+      "in love with TypeScript",
+      "Simona Winnekes",
+    ],
     startDelay: 2000,
     typeSpeed: 45,
     backSpeed: 40,
@@ -17,6 +31,7 @@ export function Hero() {
 
   return (
     <Center
+      p={2}
       h="100vh"
       w="100vw"
       color="white"
@@ -43,7 +58,7 @@ export function Hero() {
 
         <Center pt="4em">
           <Heading as="h3" size="1xl">
-            (more coming soon)
+            (more info coming soon)
           </Heading>
 
           {/*<motion.div*/}
@@ -72,7 +87,7 @@ export function Hero() {
             </a>
             <a href="mailto:simona.winnekes@googlemail.com">
               <img
-                src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
+                src="https://img.shields.io/badge/Mail-D14836?style=for-the-badge&logo=gmail&logoColor=white"
                 alt="Mail me"
               />
             </a>
