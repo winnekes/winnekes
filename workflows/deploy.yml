@@ -16,7 +16,7 @@ jobs:
           node-version: "15.x"
       - uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/.next/cache
+          path: ${{ github.workspace }}/portfolio/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
 
       - name: build client
@@ -41,7 +41,7 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
         with:
-          source: "./.next, ./package.json, ./public, ./package-lock.json"
+          source: "./portfolio/.next, ./portfolio/package.json, ./portfolio/public, ./portfolio/package-lock.json"
           target: "/home/simona/webapps/winnekes"
 
       - name: restart client
