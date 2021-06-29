@@ -1,0 +1,54 @@
+name: Build and deploy portfolio
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-client:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "15.x"
+      - uses: actions/cache@v2
+        with:
+          path: ${{ github.workspace }}/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+
+      - name: build client
+        run: |
+          npm run build
+
+      - name: delete old client
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+          script: cd /home/simona/webapps && rm winnekes -r
+
+      - name: deploy client
+        uses: appleboy/scp-action@master
+        env:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+        with:
+          source: "./.next, ./package.json, ./public, ./package-lock.json"
+          target: "/home/simona/webapps/winnekes"
+
+      - name: restart client
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          PORT: ${{ secrets.SSH_PORT }}
+          KEY: ${{ secrets.SSH_KEY }}
+
+          script: export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && cd /home/simona/webapps/winnekes && npm install && pm2 restart winnekes-client-3009

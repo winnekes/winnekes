@@ -1,0 +1,19 @@
+name: Test Portfolio
+on:  [push]
+
+jobs:
+  test-client:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "15.x"
+
+      - name: check client
+        run: |
+          npm ci
+          npm audit
+          npm run lint
+
