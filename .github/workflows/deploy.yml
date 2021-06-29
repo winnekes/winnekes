@@ -43,7 +43,7 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "./portfolio/.next, ./portfolio/package.json, ./portfolio/public, ./portfolio/package-lock.json"
-          target: "/home/simona/webapps/winnekes/portfolio"
+          target: "/home/simona/webapps/winnekes"
 
       - name: restart client
         uses: appleboy/ssh-action@master
