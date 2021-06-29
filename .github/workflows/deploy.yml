@@ -32,7 +32,7 @@ jobs:
           USERNAME: ${{ secrets.SSH_USERNAME }}
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
-          script: cd /home/simona/webapps && rm winnekes -r
+          script: cd /home/simona/webapps/winnekes && rm portfolio -r
 
       - name: deploy client
         uses: appleboy/scp-action@master
@@ -43,7 +43,7 @@ jobs:
           KEY: ${{ secrets.SSH_KEY }}
         with:
           source: "./portfolio/.next, ./portfolio/package.json, ./portfolio/public, ./portfolio/package-lock.json"
-          target: "/home/simona/webapps/winnekes"
+          target: "/home/simona/webapps/winnekes/portfolio"
 
       - name: restart client
         uses: appleboy/ssh-action@master
@@ -53,4 +53,4 @@ jobs:
           PORT: ${{ secrets.SSH_PORT }}
           KEY: ${{ secrets.SSH_KEY }}
 
-          script: export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && cd /home/simona/webapps/winnekes && npm install && pm2 restart winnekes-client-3009
+          script: export NVM_DIR=~/.nvm && source ~/.nvm/nvm.sh && cd /home/simona/webapps/winnekes/portfolio && npm install && pm2 restart winnekes-client-3009
