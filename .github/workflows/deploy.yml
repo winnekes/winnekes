@@ -22,6 +22,7 @@ jobs:
       - name: build client
         run: |
           cd portfolio
+          npm i
           npm run build
 
       - name: delete old client
