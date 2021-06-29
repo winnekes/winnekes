@@ -7,10 +7,8 @@ import {
   Icon,
   Text,
   VisuallyHidden,
+  VStack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { FaChevronDown } from "react-icons/fa";
 import { useRef } from "react";
 import useTyped from "use-typed";
 
@@ -56,30 +54,23 @@ export function Hero() {
           <h1 ref={demoRef}>a developer</h1>
         </div>
 
-        <Center pt="4em">
-          <Heading as="h3" size="1xl">
-            (more info coming soon)
-          </Heading>
-
-          {/*<motion.div*/}
-          {/*  animate={{ scale: [1, 1.5, 1] }}*/}
-          {/*  transition={{ ease: "linear", duration: 2, repeat: Infinity }}*/}
-          {/*>*/}
-          {/*  <Link href="#testi">*/}
-          {/*    <Icon as={FaChevronDown} boxSize="2em" />*/}
-          {/*  </Link>*/}
-          {/*</motion.div>*/}
-        </Center>
-
-        <Center pt="4em">
+        <VStack pt="4em">
           <HStack p={6} spacing={1}>
-            <a href="https://linkedin.com/in/winnekes" target="_blank">
+            <a
+              href="https://linkedin.com/in/winnekes"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
                 alt="LinkedIn"
               />
             </a>
-            <a href="https://instagram.com/robotsandcats" target="_blank">
+            <a
+              href="https://instagram.com/robotsandcats"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"
                 alt="Instagram"
@@ -92,7 +83,30 @@ export function Hero() {
               />
             </a>
           </HStack>
-        </Center>
+
+          <HStack p={6} spacing={1}>
+            <a
+              href="https://blog.winnekes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://img.shields.io/badge/Medium-white?style=for-the-badge&logo=medium&logoColor=black"
+                alt="Medium"
+              />
+            </a>
+            <a
+              href="https://winnekes.hashnode.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://img.shields.io/badge/Hashnode-3879FF?style=for-the-badge&logo=hashnode&logoColor=white"
+                alt="Instagram"
+              />
+            </a>
+          </HStack>
+        </VStack>
       </Flex>
     </Center>
   );

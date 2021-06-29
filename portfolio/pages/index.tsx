@@ -1,20 +1,18 @@
-import { Center, ChakraProvider, Heading, Text } from "@chakra-ui/react";
 import Head from "next/head";
-
 import { Hero } from "../components/hero";
-import { About } from "../components/about";
 
 export default function Home() {
   return (
     <div>
       <Head>
         <title>
-          simona winnekes - from scrubs to pyjamas; a web developer's portfolio
+          simona winnekes - from scrubs to pyjamas; a typescript developer and
+          robot enthusiast
         </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="from scrubs to pyjamas - a simple portfolio of a web developer in love with node.js and typescript. follow my latest adventure: building my very own robot!"
+          content="from scrubs to pyjamas - a simple portfolio of a web developer in love with node.js and typescript. and robots."
         />
         <link
           rel="apple-touch-icon"
@@ -40,7 +38,6 @@ export default function Home() {
       </Head>
 
       <Hero />
-      {/*<About />*/}
     </div>
   );
 }
