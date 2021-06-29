@@ -13,6 +13,7 @@ jobs:
 
       - name: check client
         run: |
+          cd portfolio
           npm ci
           npm audit
           npm run lint
