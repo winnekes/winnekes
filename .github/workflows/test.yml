@@ -16,5 +16,4 @@ jobs:
           cd portfolio
           npm ci
           npm audit
-          npm run lint
 
