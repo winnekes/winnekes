@@ -6,7 +6,7 @@
 I strive for three things in development: **clarity**, **reusability** and **beauty**.
 
 ### 💡 Currently working on
-- **TypeScript for Jupyter Notebook** - open source project, recently took over ownership
+- **ITypeScript** - Kernel for Jupyter Notebook, allowing you to play around with TypeScript notebooks
 - **Steve the Robot** (working title): IoT - a cute, mischievous desk robot with his own personality
 - <a href="https://simplyshift.app" target="_blank">**SimplyShift**</a> - a simple calendar for people with irregular hours 
 - **From scrubs to pyjamas** - blog series about my career switch, bootcamp experience and things I have learned in the past couple of years
