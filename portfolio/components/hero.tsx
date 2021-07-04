@@ -102,7 +102,7 @@ export function Hero() {
             >
               <img
                 src="https://img.shields.io/badge/Hashnode-3879FF?style=for-the-badge&logo=hashnode&logoColor=white"
-                alt="Instagram"
+                alt="Hashnode"
               />
             </a>
           </HStack>
