@@ -9,7 +9,7 @@ I strive for three things in development: **clarity**, **reusability** and **bea
 - **ITypeScript** - Kernel for Jupyter Notebook, allowing you to play around with TypeScript notebooks
 - **Steve the Robot** (working title): IoT - a cute, mischievous desk robot with his own personality
 - <a href="https://simplyshift.app" target="_blank">**SimplyShift**</a> - a simple calendar for people with irregular hours 
-- **From Scrubs to Pyjamas** - blog series about my career switch, bootcamp experience and things I have learned in the past couple of years (publishing on Medium and Hashnode)
+- **From Scrubs to Slacks** - blog series about my career switch, bootcamp experience and things I have learned in the past couple of years (publishing on Medium and Hashnode)
 
 
 ### 👋🏼 Say hello!
