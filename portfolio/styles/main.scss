@@ -6,18 +6,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  scroll-behavior: smooth;background-color: #d5d5d5 !important;
-}
-
-#__next {
-  // background: url("/images/background_galaxy_swirl.png") no-repeat center center;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
-  //height: 100vh;
-  background-color: #04080a;
-
+  scroll-behavior: smooth;
 }
 
 @import "typography";

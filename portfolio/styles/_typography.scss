@@ -1,26 +1,17 @@
 /* Global overrides */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Prata&display=swap");
 
-h3 {
-  text-transform: uppercase;
-  letter-spacing: 6px;
+body {
+  font-family: Poppins, sans-serif !important;
 }
 
-.main-heading {
-  font-size: 100px;
-  color: #ffffff;
-  font-family: "Anton", serif !important;
-  letter-spacing: 7px;
-  text-transform: uppercase;
-  text-shadow: -2px 0 1px rgb(30, 242, 241), 2px 0 1px rgb(246, 5, 10);
-}
-
-.main-heading h1 {
-  display: inline;
-}
-
-@media only screen and (max-width: 600px) {
-  .main-heading {
-    font-size: 2rem;
-  }
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Prata, serif !important;
+  line-height: 60px !important;
 }

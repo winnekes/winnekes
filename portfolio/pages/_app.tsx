@@ -4,7 +4,7 @@ import { Head } from "next/document";
 import { useEffect } from "react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { AnimateSharedLayout } from "framer-motion";
-import { theme } from "../constants/theme";
+import { theme } from "../styles/theme";
 import "../styles/main.scss";
 import "aos/dist/aos.css";
 
