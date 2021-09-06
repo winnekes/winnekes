@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export default function Projects() {
   const MotionHeading = motion(Heading);
   return (
-    <Page isDarkMode background="black url(./stars.png)">
+    <Page>
       <header>
         <MotionHeading as="h1" fontSize="6xl">
           Robots, cats, <br />

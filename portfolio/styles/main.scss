@@ -14,11 +14,32 @@ body {
 *:focus {
   box-shadow: none !important;
   outline: 0 !important;
-  border-bottom: 2px solid red !important;
+  border-bottom: none !important;
 }
 
 button:focus {
   box-shadow: 0 0 5px #9a2d67 !important;
 }
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
 
+::-webkit-scrollbar:vertical {
+  width: 12px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: blue;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: red;
+}
 @import "typography";

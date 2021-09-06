@@ -3,19 +3,17 @@ import { FunctionComponent } from "react";
 import { maxWidth, spacing } from "../../styles/theme";
 import { DesktopNavigation } from "../navigation/desktop-navigation";
 import { MobileNavigation } from "../navigation/mobile-navigation";
+import { PageProps } from "./page";
 
-type Props = {
-  isDarkMode?: boolean;
-};
+export const Navigation: FunctionComponent<PageProps> = ({
+  background,
+  isDarkMode,
+}) => {
+  const bg = !background && isDarkMode && "black";
+  const color = isDarkMode && "white";
 
-export const Navigation: FunctionComponent<Props> = ({ isDarkMode }) => {
   return (
-    <Box
-      width="100%"
-      py="50px"
-      color={isDarkMode && "white"}
-      bg={isDarkMode && "black"}
-    >
+    <Box width="100%" py="50px" color={color} bg={bg}>
       <Container maxWidth={maxWidth}>
         <MobileNavigation />
         <DesktopNavigation />

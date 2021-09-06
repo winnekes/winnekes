@@ -8,9 +8,9 @@ import { MetaTagsHead } from "../components/meta-tags-head";
 export default function Home() {
   const MotionHeading = motion(Heading);
   return (
-    <Page>
+    <Page background="url(./stars.png)">
       <header>
-        <MotionHeading as="h1" fontSize="6xl" layoutId="test">
+        <MotionHeading as="h1" fontSize="6xl">
           Robots, cats, <br />
           all things cute,
           <br /> that is me.
