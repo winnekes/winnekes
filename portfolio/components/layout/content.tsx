@@ -1,11 +1,15 @@
-import { Container } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import { FunctionComponent } from "react";
 import { maxWidth, spacing } from "../../styles/theme";
 
-export const Content: FunctionComponent = ({ children }) => {
+type Props = {
+  isDarkMode?: boolean;
+};
+
+export const Content: FunctionComponent<Props> = ({ isDarkMode, children }) => {
   return (
-    <Container maxWidth={maxWidth} mx={spacing}>
-      {children}
-    </Container>
+    <Box width="100vw" px={spacing} bg={isDarkMode && "black"}>
+      <Container maxWidth={maxWidth}>{children}</Container>
+    </Box>
   );
 };

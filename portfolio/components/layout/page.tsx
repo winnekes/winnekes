@@ -4,11 +4,14 @@ import { maxWidth, spacing } from "../../styles/theme";
 import { Content } from "./content";
 import { Navigation } from "./navigation";
 
-export const Page: FunctionComponent = ({ children }) => {
+type Props = {
+  isDarkMode?: boolean;
+};
+export const Page: FunctionComponent<Props> = ({ isDarkMode, children }) => {
   return (
-    <VStack pt="50px">
-      <Navigation />
-      <Content>{children}</Content>
+    <VStack spacing={0}>
+      <Navigation isDarkMode={isDarkMode} />
+      <Content isDarkMode={isDarkMode}>{children}</Content>
     </VStack>
   );
 };

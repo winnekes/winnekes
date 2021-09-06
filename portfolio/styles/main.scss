@@ -9,4 +9,16 @@ body {
   scroll-behavior: smooth;
 }
 
+// Override Chakra UI focus styling
+[data-focus],
+*:focus {
+  box-shadow: none !important;
+  outline: 0 !important;
+  border-bottom: 2px solid red !important;
+}
+
+button:focus {
+  box-shadow: 0 0 5px #9a2d67 !important;
+}
+
 @import "typography";

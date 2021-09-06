@@ -1,6 +1,7 @@
 import { Flex, HStack, Link, Text, useDisclosure } from "@chakra-ui/react";
-import { FunctionComponent, useRef } from "react";
+import React, { FunctionComponent, useRef } from "react";
 import { spacing } from "../../styles/theme";
+import NextLink from "next/link";
 
 export const DesktopNavigation: FunctionComponent = () => {
   return (
@@ -16,13 +17,21 @@ export const DesktopNavigation: FunctionComponent = () => {
         <Text>winnekes</Text>
 
         <HStack spacing={4} textTransform="uppercase">
-          <Link>About me</Link>
+          <NextLink href="/" passHref>
+            <Link href="/">About me</Link>
+          </NextLink>
 
-          <Link>Projects</Link>
+          <NextLink href="/projects" passHref>
+            <Link>Projects</Link>
+          </NextLink>
 
-          <Link>Contact</Link>
+          <NextLink href="/contact" passHref>
+            <Link>Contact</Link>
+          </NextLink>
 
-          <Link>Mentorship</Link>
+          <NextLink href="/mentorship" passHref>
+            <Link>Mentorship</Link>
+          </NextLink>
         </HStack>
       </Flex>
     </>
