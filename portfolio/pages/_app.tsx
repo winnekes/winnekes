@@ -1,12 +1,14 @@
 import type { AppProps } from "next/app";
 import AOS from "aos";
-import { Head } from "next/document";
 import { useEffect } from "react";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { AnimateSharedLayout, motion } from "framer-motion";
 import { theme } from "../styles/theme";
-import "../styles/main.scss";
 import "aos/dist/aos.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "../styles/main.scss";
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {

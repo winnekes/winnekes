@@ -14,7 +14,7 @@ export const Navigation: FunctionComponent<PageProps> = ({
 
   return (
     <Box width="100%" py="50px" color={color} bg={bg}>
-      <Container maxWidth={maxWidth}>
+      <Container maxWidth={maxWidth} px={10}>
         <MobileNavigation />
         <DesktopNavigation />
       </Container>

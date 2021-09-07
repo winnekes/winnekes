@@ -3,10 +3,12 @@ import {
   Flex,
   HStack,
   IconButton,
+  Link,
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FunctionComponent, useRef } from "react";
+import NextLink from "next/link";
+import React, { FunctionComponent, useRef } from "react";
 import { BiMenu } from "react-icons/bi";
 import { spacing } from "../../styles/theme";
 import { Drawer } from "./drawer";
@@ -21,16 +23,12 @@ export const MobileNavigation: FunctionComponent = () => {
       <Flex
         display={{ base: "flex", lg: "none" }}
         justify="space-between"
+        align="center"
         pb={spacing}
       >
-        <HStack justify="center">
-          <Box position="relative" boxSize="24px" invert="0%">
-            <Image src="/apple-touch-icon.png" layout="fill" />
-          </Box>
-          <Text fontWeight="bold" alignSelf="center">
-            winnekes
-          </Text>
-        </HStack>
+        <NextLink href="/" passHref>
+          <Link fontWeight="bold">winnekes</Link>
+        </NextLink>
 
         <IconButton
           size="lg"
@@ -38,6 +36,7 @@ export const MobileNavigation: FunctionComponent = () => {
           icon={<BiMenu size="30px" />}
           variant="ghost"
           aria-label="Open menu"
+          right="-15px"
         />
       </Flex>
 

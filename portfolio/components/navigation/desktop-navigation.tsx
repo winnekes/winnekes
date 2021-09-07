@@ -14,11 +14,13 @@ export const DesktopNavigation: FunctionComponent = () => {
         direction="row"
         mb={spacing}
       >
-        <Text>winnekes</Text>
+        <NextLink href="/" passHref>
+          <Link fontWeight="bold">winnekes</Link>
+        </NextLink>
 
         <HStack spacing={4} textTransform="uppercase">
           <NextLink href="/" passHref>
-            <Link href="/">About me</Link>
+            <Link>About me</Link>
           </NextLink>
 
           <NextLink href="/projects" passHref>

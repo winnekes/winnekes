@@ -43,3 +43,16 @@ button:focus {
   background: red;
 }
 @import "typography";
+
+//* {
+//  border: 1px solid red !important;
+//}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: red !important;
+}

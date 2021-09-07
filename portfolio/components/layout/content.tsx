@@ -12,8 +12,10 @@ export const Content: FunctionComponent<PageProps> = ({
   const color = isDarkMode && "white";
 
   return (
-    <Box width="100%" minH="100vh" px={spacing} color={color} bg={bg}>
-      <Container maxWidth={maxWidth}>{children}</Container>
+    <Box width="100%" minH="100vh" py={spacing} color={color} bg={bg}>
+      <Container maxWidth={maxWidth} px={10}>
+        {children}
+      </Container>
     </Box>
   );
 };
