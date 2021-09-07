@@ -1,7 +1,7 @@
-import { Flex, HStack, Link, Text, useDisclosure } from "@chakra-ui/react";
-import React, { FunctionComponent, useRef } from "react";
-import { spacing } from "../../styles/theme";
+import { Flex, HStack, Link } from "@chakra-ui/react";
+import React, { FunctionComponent } from "react";
 import NextLink from "next/link";
+import { LinkItem } from "./navigation";
 
 export const DesktopNavigation: FunctionComponent = () => {
   return (
@@ -12,28 +12,20 @@ export const DesktopNavigation: FunctionComponent = () => {
         align="center"
         justify="space-between"
         direction="row"
-        mb={spacing}
+        fontSize="2xl"
       >
         <NextLink href="/" passHref>
           <Link fontWeight="bold">winnekes</Link>
         </NextLink>
 
         <HStack spacing={4} textTransform="uppercase">
-          <NextLink href="/" passHref>
-            <Link>About me</Link>
-          </NextLink>
-
-          <NextLink href="/projects" passHref>
-            <Link>Projects</Link>
-          </NextLink>
-
-          <NextLink href="/contact" passHref>
-            <Link>Contact</Link>
-          </NextLink>
-
-          <NextLink href="/mentorship" passHref>
-            <Link>Mentorship</Link>
-          </NextLink>
+          <LinkItem href="/">About</LinkItem>
+          <LinkItem href="https://blog.winnekes.com" isExternal>
+            Blog
+          </LinkItem>
+          <LinkItem href="/projects">Projects</LinkItem>
+          <LinkItem href="/contact">Contact</LinkItem>
+          <LinkItem href="/mentorship">Mentorship</LinkItem>
         </HStack>
       </Flex>
     </>

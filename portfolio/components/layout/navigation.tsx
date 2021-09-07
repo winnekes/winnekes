@@ -6,15 +6,20 @@ import { MobileNavigation } from "../navigation/mobile-navigation";
 import { PageProps } from "./page";
 
 export const Navigation: FunctionComponent<PageProps> = ({
-  background,
-  isDarkMode,
+  backgroundImage,
+  isDark,
 }) => {
-  const bg = !background && isDarkMode && "black";
-  const color = isDarkMode && "white";
+  const bg = !backgroundImage && isDark && "black";
+  const color = isDark && "white";
 
   return (
     <Box width="100%" py="50px" color={color} bg={bg}>
-      <Container maxWidth={maxWidth} px={10}>
+      <Container
+        maxWidth={maxWidth}
+        px={10}
+        py="20px"
+        bg={backgroundImage && (isDark ? "black" : "white")}
+      >
         <MobileNavigation />
         <DesktopNavigation />
       </Container>

@@ -1,25 +1,26 @@
 import {
   DrawerBody,
   DrawerContent,
-  DrawerHeader,
   DrawerOverlay,
   Drawer as ChakraDrawer,
   useBreakpointValue,
-  Link,
   VStack,
-  StackDivider,
 } from "@chakra-ui/react";
-import { MutableRefObject } from "react";
+import { FunctionComponent, MutableRefObject } from "react";
 import React from "react";
-import NextLink from "next/link";
+import { LinkItem } from "./navigation";
 
-type Props = {
+type DrawerProps = {
   finalFocusRef: MutableRefObject<null>;
   isOpen: boolean;
   onClose: () => void;
 };
 
-export const Drawer = ({ finalFocusRef, isOpen, onClose }: Props) => {
+export const Drawer: FunctionComponent<DrawerProps> = ({
+  finalFocusRef,
+  isOpen,
+  onClose,
+}) => {
   const drawerSize = useBreakpointValue({ base: "xs", lg: "md" });
 
   return (
@@ -33,32 +34,20 @@ export const Drawer = ({ finalFocusRef, isOpen, onClose }: Props) => {
     >
       <DrawerOverlay bg="#ff000099" />
       <DrawerContent>
-        <DrawerHeader>What do you want to know?</DrawerHeader>
-        <DrawerBody as="nav">
+        <DrawerBody as="nav" mt="100px">
           <VStack
-            spacing={4}
+            spacing={8}
             align="flex-end"
-            divider={<StackDivider borderColor="red" />}
             fontFamily="heading"
-            fontSize="2xl"
+            fontSize="3xl"
           >
-            <NextLink href="/" passHref>
-              <Link href="/" onClick={onClose}>
-                About me
-              </Link>
-            </NextLink>
-
-            <NextLink href="/projects" passHref>
-              <Link onClick={onClose}>Projects</Link>
-            </NextLink>
-
-            <NextLink href="/contact" passHref>
-              <Link onClick={onClose}>Contact</Link>
-            </NextLink>
-
-            <NextLink href="/mentorship" passHref>
-              <Link onClick={onClose}>Mentorship</Link>
-            </NextLink>
+            <LinkItem href="/">About</LinkItem>
+            <LinkItem href="https://blog.winnekes.com" isExternal>
+              Blog
+            </LinkItem>
+            <LinkItem href="/projects">Projects</LinkItem>
+            <LinkItem href="/contact">Contact</LinkItem>
+            <LinkItem href="/mentorship">Mentorship</LinkItem>
           </VStack>
         </DrawerBody>
       </DrawerContent>

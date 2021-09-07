@@ -10,11 +10,8 @@ export default function Projects() {
     <Page>
       <header>
         <MotionHeading as="h1" fontSize="6xl">
-          Robots, cats, <br />
-          all things cute,
-          <br /> that is me.
+          Wanna chat?
         </MotionHeading>
-        dddddddddddddddddddddddddd
       </header>
     </Page>
   );

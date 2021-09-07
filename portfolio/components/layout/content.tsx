@@ -4,12 +4,12 @@ import { maxWidth, spacing } from "../../styles/theme";
 import { PageProps } from "./page";
 
 export const Content: FunctionComponent<PageProps> = ({
-  isDarkMode,
-  background,
+  isDark,
+  backgroundImage,
   children,
 }) => {
-  const bg = !background && isDarkMode && "black";
-  const color = isDarkMode && "white";
+  const bg = !backgroundImage && isDark && "black";
+  const color = isDark && "white";
 
   return (
     <Box width="100%" minH="100vh" py={spacing} color={color} bg={bg}>

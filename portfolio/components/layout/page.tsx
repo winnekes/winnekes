@@ -5,13 +5,13 @@ import { Content } from "./content";
 import { Navigation } from "./navigation";
 
 export type PageProps = {
-  isDarkMode?: boolean;
-  background?: string;
+  isDark?: boolean;
+  backgroundImage?: string;
 };
 
 export const Page: FunctionComponent<PageProps> = ({ children, ...props }) => {
   return (
-    <VStack spacing={0} background={props.background}>
+    <VStack spacing={0} background={props.backgroundImage}>
       <Navigation {...props} />
       <Content {...props}>{children}</Content>
     </VStack>

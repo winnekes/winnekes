@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import NextImage from "next/image";
 import { FunctionComponent } from "react";
 import SwiperCore, { Pagination, Navigation } from "swiper";
@@ -6,27 +6,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 SwiperCore.use([Pagination, Navigation]);
 
-export type ImageDetails = {
+type ImageDetails = {
   url: string;
   alt: string;
 };
 
-type Props = {
+export type ImageCarouselProps = {
   images: ImageDetails[];
 };
 
-export const ImageCarousel: FunctionComponent<Props> = ({ images }) => {
+export const ImageCarousel: FunctionComponent<ImageCarouselProps> = ({
+  images,
+}) => {
   return (
-    <Box my={5}>
-      <Swiper pagination navigation className="mySwiper">
+    <Box my={5} pb={5}>
+      <Swiper pagination navigation>
         {images.map((image) => (
           <SwiperSlide key={image.url}>
-            <NextImage
-              width="502"
-              height="313"
-              src={image.url}
-              alt={image.alt}
-            />
+            <Box pb={10}>
+              <NextImage
+                width="800"
+                height="600"
+                src={image.url}
+                alt={image.alt}
+              />
+            </Box>
           </SwiperSlide>
         ))}
       </Swiper>
