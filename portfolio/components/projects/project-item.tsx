@@ -1,6 +1,7 @@
 import { Box, Heading, HStack, Icon, Link, Tag, Text } from "@chakra-ui/react";
 import { FunctionComponent } from "react";
 import { BiLinkExternal } from "react-icons/bi";
+import { Paragraph } from "../text/paragraph";
 import { ImageCarousel, ImageCarouselProps } from "./image-carousel";
 
 export type ProjectItemProps = {
@@ -20,9 +21,7 @@ export const ProjectItem: FunctionComponent<
       </Heading>
       <ImageCarousel images={images} />
       <Box>
-        <Text fontSize="xl" mb={5}>
-          {description}
-        </Text>
+        <Paragraph>{description}</Paragraph>
 
         {tags && (
           <HStack spacing={4} my={7}>

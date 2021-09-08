@@ -97,7 +97,10 @@ const projects: Array<ProjectItemProps & ImageCarouselProps> = [
 
 export default function Projects() {
   return (
-    <Page isDark>
+    <Page
+      isDark
+      backgroundImage="url(https://unblast.com/wp-content/uploads/2018/08/Dust-Textures-02.jpg)"
+    >
       <Box as="header" mb="100px">
         <Heading as="h1" fontSize="6xl">
           Projects

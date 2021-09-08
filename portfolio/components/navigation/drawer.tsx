@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import { FunctionComponent, MutableRefObject } from "react";
 import React from "react";
-import { LinkItem } from "./navigation";
+import { LinkItem } from "../layout/navigation";
 
 type DrawerProps = {
   finalFocusRef: MutableRefObject<null>;

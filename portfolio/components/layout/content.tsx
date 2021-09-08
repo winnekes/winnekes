@@ -12,8 +12,12 @@ export const Content: FunctionComponent<PageProps> = ({
   const color = isDark && "white";
 
   return (
-    <Box width="100%" minH="100vh" py={spacing} color={color} bg={bg}>
-      <Container maxWidth={maxWidth} px={10}>
+    <Box width="100%" minH="100vh" my={spacing} color={color} bg={bg}>
+      <Container
+        maxWidth={maxWidth}
+        p={spacing}
+        bg={backgroundImage && (isDark ? "black" : "white")}
+      >
         {children}
       </Container>
     </Box>

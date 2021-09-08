@@ -1,7 +1,7 @@
 import { Flex, HStack, Link } from "@chakra-ui/react";
 import React, { FunctionComponent } from "react";
 import NextLink from "next/link";
-import { LinkItem } from "./navigation";
+import { LinkItem } from "../layout/navigation";
 
 export const DesktopNavigation: FunctionComponent = () => {
   return (

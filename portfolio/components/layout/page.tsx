@@ -11,7 +11,7 @@ export type PageProps = {
 
 export const Page: FunctionComponent<PageProps> = ({ children, ...props }) => {
   return (
-    <VStack spacing={0} background={props.backgroundImage}>
+    <VStack spacing={0} background={props.backgroundImage} style={{}}>
       <Navigation {...props} />
       <Content {...props}>{children}</Content>
     </VStack>

@@ -24,7 +24,6 @@ export const MobileNavigation: FunctionComponent = () => {
         display={{ base: "flex", lg: "none" }}
         justify="space-between"
         align="center"
-        pb={spacing}
       >
         <NextLink href="/" passHref>
           <Link fontWeight="bold">winnekes</Link>
