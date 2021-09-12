@@ -7,4 +7,4 @@ export const theme = {
 };
 
 export const spacing = "24px";
-export const maxWidth = "container.xl";
+export const navigationWidth = "70px";

@@ -1,8 +1,7 @@
-import { VStack, Container } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { FunctionComponent } from "react";
-import { maxWidth, spacing } from "../../styles/theme";
-import { Content } from "./content";
-import { Navigation } from "./navigation";
+import { ContentWrapper } from "./content-wrapper";
+import { NavigationWrapper } from "./navigation-wrapper";
 
 export type PageProps = {
   isDark?: boolean;
@@ -11,9 +10,9 @@ export type PageProps = {
 
 export const Page: FunctionComponent<PageProps> = ({ children, ...props }) => {
   return (
-    <VStack spacing={0} background={props.backgroundImage} style={{}}>
-      <Navigation {...props} />
-      <Content {...props}>{children}</Content>
-    </VStack>
+    <Box background={props.backgroundImage}>
+      <NavigationWrapper {...props} />
+      <ContentWrapper {...props}>{children}</ContentWrapper>
+    </Box>
   );
 };

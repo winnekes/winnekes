@@ -5,10 +5,12 @@ import {
   Drawer as ChakraDrawer,
   useBreakpointValue,
   VStack,
+  DrawerCloseButton,
+  DrawerHeader,
 } from "@chakra-ui/react";
 import { FunctionComponent, MutableRefObject } from "react";
 import React from "react";
-import { LinkItem } from "../layout/navigation";
+import { LinkItem } from "../layout/navigation-wrapper";
 
 type DrawerProps = {
   finalFocusRef: MutableRefObject<null>;
@@ -30,10 +32,12 @@ export const Drawer: FunctionComponent<DrawerProps> = ({
       placement="right"
       onClose={onClose}
       finalFocusRef={finalFocusRef}
-      size={drawerSize}
+      size="full"
     >
       <DrawerOverlay bg="#ff000099" />
-      <DrawerContent>
+
+      <DrawerContent bg="url(./bg.png) black" color="white">
+        <DrawerCloseButton />
         <DrawerBody as="nav" mt="100px">
           <VStack
             spacing={8}

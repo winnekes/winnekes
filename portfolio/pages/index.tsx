@@ -1,23 +1,38 @@
-import { Heading, Flex, Text, Box, Icon, IconProps } from "@chakra-ui/react";
+import {
+  Heading,
+  Flex,
+  Text,
+  Box,
+  Icon,
+  IconProps,
+  Image,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { Page } from "../components/layout/page";
 import { Paragraph } from "../components/text/paragraph";
 
 export default function Home() {
-  const MotionHeading = motion(Heading);
-
+  //backgroundImage="url(./background_space.png)"
   return (
     <Page>
-      <Box as="header">
-        <MotionHeading as="h1" fontSize="6xl">
-          <Text>
-            Robots, cats, <br />
-            all things cute,
-            <br /> that is me.
-          </Text>
-        </MotionHeading>
-      </Box>
+      <Flex
+        as="header"
+        direction={["column", null, null, "row"]}
+        align="center"
+        justify="space-between"
+      >
+        <header>
+          <Heading as="h1" fontSize="6xl">
+            <Text>
+              Robots, cats, <br />
+              all things cute,
+              <br /> that is me.
+            </Text>
+          </Heading>
+        </header>
 
+        <Image src="/hands.svg" />
+      </Flex>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi turpis
         dolor, gravida sed imperdiet at, rutrum eget massa. Nullam turpis arcu,

@@ -1,10 +1,15 @@
-import { Box, Container, Link } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Flex,
+  Link,
+  useBreakpointValue,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import React, { FunctionComponent } from "react";
-import { maxWidth, spacing } from "../../styles/theme";
-import { DesktopNavigation } from "../navigation/desktop-navigation";
-import { MobileNavigation } from "../navigation/mobile-navigation";
+import { navigationWidth, spacing } from "../../styles/theme";
+import { Navigation } from "../navigation/navigation";
 import { PageProps } from "./page";
 
 type LinkItemProps = {
@@ -32,23 +37,33 @@ export const LinkItem: FunctionComponent<LinkItemProps> = ({
   );
 };
 
-export const Navigation: FunctionComponent<PageProps> = ({
+export const NavigationWrapper: FunctionComponent<PageProps> = ({
   backgroundImage,
   isDark,
 }) => {
-  const bg = !backgroundImage && isDark && "black";
+  const bg = !backgroundImage && isDark ? "black" : "white";
   const color = isDark && "white";
+  const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
-    <Box width="100%" my={spacing} color={color} bg={bg}>
-      <Container
-        maxWidth={maxWidth}
+    <Box
+      color={color}
+      bg={bg}
+      position="fixed"
+      width={isMobile ? "full" : navigationWidth}
+      height={isMobile ? navigationWidth : "100vh"}
+      zIndex={100}
+    >
+      <Flex
+        align="center"
+        justifyContent={isMobile ? "flex-end" : "center"}
         p={spacing}
+        pl="48px"
         bg={backgroundImage && (isDark ? "black" : "white")}
+        height={isMobile ? navigationWidth : "100vh"}
       >
-        <MobileNavigation />
-        <DesktopNavigation />
-      </Container>
+        <Navigation />
+      </Flex>
     </Box>
   );
 };
