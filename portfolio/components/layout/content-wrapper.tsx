@@ -15,8 +15,8 @@ export const ContentWrapper: FunctionComponent<PageProps> = ({
   return (
     <Box py={spacing} color={color} bg={bg} w="full">
       <Container
-        maxWidth="90%"
-        p={spacing}
+        pl={!isMobile && navigationWidth}
+        maxWidth={isMobile ? "full" : `calc(100% - ${navigationWidth})`}
         bg={backgroundImage && (isDark ? "black" : "white")}
         margin={
           isMobile ? `${navigationWidth} 0 0 0` : `0 0 0 ${navigationWidth}`

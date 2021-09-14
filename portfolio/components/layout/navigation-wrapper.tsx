@@ -3,6 +3,7 @@ import {
   Container,
   Flex,
   Link,
+  LinkProps,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -17,10 +18,11 @@ type LinkItemProps = {
   isExternal?: boolean;
 };
 
-export const LinkItem: FunctionComponent<LinkItemProps> = ({
+export const LinkItem: FunctionComponent<LinkItemProps & LinkProps> = ({
   href,
   isExternal,
   children,
+  ...props
 }) => {
   const router = useRouter();
 
@@ -30,6 +32,7 @@ export const LinkItem: FunctionComponent<LinkItemProps> = ({
         fontWeight="bold"
         borderBottom={router.pathname === href && "2px solid red"}
         isExternal={isExternal}
+        {...props}
       >
         {children}
       </Link>
@@ -48,7 +51,7 @@ export const NavigationWrapper: FunctionComponent<PageProps> = ({
   return (
     <Box
       color={color}
-      bg={bg}
+      bg="red"
       position="fixed"
       width={isMobile ? "full" : navigationWidth}
       height={isMobile ? navigationWidth : "100vh"}
@@ -57,8 +60,6 @@ export const NavigationWrapper: FunctionComponent<PageProps> = ({
       <Flex
         align="center"
         justifyContent={isMobile ? "flex-end" : "center"}
-        p={spacing}
-        pl="48px"
         bg={backgroundImage && (isDark ? "black" : "white")}
         height={isMobile ? navigationWidth : "100vh"}
       >
