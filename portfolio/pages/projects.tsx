@@ -6,7 +6,7 @@ import {
 } from "../components/projects/project-item";
 import { ImageCarouselProps } from "../components/projects/image-carousel";
 
-const projects: Array<ProjectItemProps & ImageCarouselProps> = [
+export const projects: Array<ProjectItemProps & ImageCarouselProps> = [
   {
     title: "Portfolio",
     description:

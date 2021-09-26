@@ -35,7 +35,7 @@ export const ProjectItem: FunctionComponent<
 
         {projectUrl && (
           <Link href="https://sturmglas.com" isExternal>
-            {projectUrl} <Icon as={BiLinkExternal} color="red" />
+            {projectUrl} <Icon as={BiLinkExternal} color="brand01.500" />
           </Link>
         )}
       </Box>

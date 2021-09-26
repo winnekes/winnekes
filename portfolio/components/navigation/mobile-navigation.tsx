@@ -17,7 +17,13 @@ type Props = {
 export const MobileNavigation: FunctionComponent<Props> = ({ onClose }) => {
   return (
     <VStack justify="space-between">
-      <VStack as="nav" spacing={8} fontFamily="heading" fontSize="3xl">
+      <VStack
+        as="nav"
+        spacing={8}
+        fontFamily="heading"
+        fontSize="3xl"
+        mt="100px"
+      >
         <LinkItem href="/" onClick={onClose}>
           About
         </LinkItem>

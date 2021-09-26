@@ -13,14 +13,11 @@ export const ContentWrapper: FunctionComponent<PageProps> = ({
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
-    <Box py={spacing} color={color} bg={bg} w="full">
+    <Box py={spacing} pt="70px" color={color} bg={bg} w="full">
       <Container
-        pl={!isMobile && navigationWidth}
-        maxWidth={isMobile ? "full" : `calc(100% - ${navigationWidth})`}
+        maxWidth="full"
+        padding={[spacing, null, null, "48px"]}
         bg={backgroundImage && (isDark ? "black" : "white")}
-        margin={
-          isMobile ? `${navigationWidth} 0 0 0` : `0 0 0 ${navigationWidth}`
-        }
       >
         {children}
       </Container>

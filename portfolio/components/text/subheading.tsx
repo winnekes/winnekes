@@ -1,4 +1,5 @@
 import { ComponentWithAs, Text, TextProps } from "@chakra-ui/react";
+import { colors } from "../../styles/theme";
 
 export const Subheading: ComponentWithAs<"p", TextProps> = ({
   children,
@@ -6,7 +7,7 @@ export const Subheading: ComponentWithAs<"p", TextProps> = ({
 }) => {
   return (
     <Text
-      color="gold"
+      color="brand01.500"
       fontWeight="bold"
       fontSize="xs"
       textTransform="uppercase"

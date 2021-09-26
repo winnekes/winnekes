@@ -41,8 +41,7 @@ export const Drawer: FunctionComponent<DrawerProps> = ({
         //borderRadius="30% 0 0 30% / 30% 0 0 70%"
         //   animation="morph-border 20s infinite"
       >
-        <DrawerCloseButton size="lg" />
-        <DrawerBody as={Center}>
+        <DrawerBody>
           {isMobile ? (
             <MobileNavigation onClose={onClose} />
           ) : (
